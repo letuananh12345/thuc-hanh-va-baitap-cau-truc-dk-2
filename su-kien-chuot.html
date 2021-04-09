@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>...................</title>
+</head>
+<body>
+<form>
+    <img id="anh" src="ball.jpg" height="200" width="200"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onclick="moveRight()" />
+</form>
+<script>
+    let imgObj = null
+    imgObj = document.getElementById('anh');
+    function init() {
+        imgObj = document.getElementById('anh');
+        imgObj.style.position = 'relative';
+        //relative ; cho minh di chuyen anh. neu k co thi anh dung im
+        imgObj.style.left = '0px';
+        //imgObj.style.left. : anh so vs vi tri dat anh
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 50 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
